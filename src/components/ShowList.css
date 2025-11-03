@@ -1,0 +1,20 @@
+.showlist-container {
+  text-align: left;
+}
+.showlist-container hr {
+  border-color: #444;
+}
+.back-button {
+  background: #444;
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.back-button:hover {
+  background: #555;
+}
+/* We can re-use .show-list and .show-item from App.css */
