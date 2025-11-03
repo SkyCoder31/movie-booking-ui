@@ -1,16 +1,46 @@
-# React + Vite
+# Movie Booking UI (React)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a modern, responsive frontend for a movie ticket booking system, built with React and Vite. It provides a seamless 3-step flow for users, from movie selection to seat booking, and is fully integrated with our production [Movie Booking API](https://github.com/your-username/movie-booking-api).
 
-Currently, two official plugins are available:
+**Live Demo:** `https://your-frontend-app-name.vercel.app`
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## React Compiler
+* **Full Authentication:** Secure sign-up and login flow using JWT.
+* **Persistent Sessions:** Users stay logged in across browser sessions.
+* **Step 1: Movie Selection:** A responsive grid of "Now Playing" movies.
+* **Step 2: Showtime Selection:** A list of available showtimes for a selected movie.
+* **Step 3: Interactive Seat Map:** A visual seat map that differentiates between `available` seats, `booked` (by others) seats, and `mine` (booked by you) seats.
+* **Authenticated Booking:** Securely books seats using the user's auth token.
+* **Error Handling:** Provides clear feedback for login, registration, or booking failures.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Technical Documentation
 
-## Expanding the ESLint configuration
+For a detailed breakdown of the system architecture, component hierarchy, and state management, see the full [**DOCUMENTATION.md**](DOCUMENTATION.md).
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack
+
+* **React:** For building the component-based UI.
+* **Vite:** For a fast, modern development environment.
+* **Axios:** As a promise-based HTTP client for all API communication.
+* **Custom Hooks:** `useAuth` hook to manage user state and `localStorage` persistence.
+* **Central API Client:** A central `api.js` file with an `axios` interceptor to automatically attach the `Authorization` header to all protected requests.
+
+## How to Run Locally
+
+1.  **Clone the repository:**
+    ```bash
+    git clone <your-repo-url>
+    cd movie-booking-ui
+    ```
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
+3.  **Update API URL:**
+    * Open `src/api.js`.
+    * Change the `API_URL` to point to your local backend server (e.g., `http://localhost:3000/api`).
+4.  **Start the dev server:**
+    ```bash
+    npm run dev
+    ```
