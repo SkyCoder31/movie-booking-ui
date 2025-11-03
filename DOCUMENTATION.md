@@ -35,13 +35,12 @@ graph TD
 
 ## 4. Component Hierarchy
 
-```mermaid
 graph TD
     App[App.jsx] --> AuthForm[AuthForm.jsx]
     App --> ShowList[ShowList.jsx]
-    App --> MovieGrid[MovieGrid.jsx]
+    App --> MovieGrid(MovieGrid - in App.jsx)
+    
     ShowList --> SeatMap[SeatMap.jsx]
-```
 
 ## 5. State Management
 
