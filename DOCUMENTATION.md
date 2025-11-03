@@ -10,17 +10,18 @@ This diagram shows the frontend's relationship with the user and the backend API
 graph TD
     User[User] --> Browser[Browser]
 
-    subgraph "Vercel Cloud Platform"
-        Browser --> React[React UI (Vite)]
+    subgraph Vercel_Cloud_Platform
+        React[React UI (Vite)]
     end
 
-    subgraph "Render Cloud Platform"
+    subgraph Render_Cloud_Platform
         API[Movie Booking API]
     end
 
-    React -->|API Calls (Axios)| API
-    API -->|Responds (JSON)| React
-    React -->|Renders HTML/CSS| Browser
+    Browser --> React
+    React --> API
+    API --> React
+    React --> Browser
 ```
 
 ## 3. Tech Stack & Key Libraries
@@ -37,20 +38,10 @@ graph TD
 
 ```mermaid
 graph TD
-    User[User] --> Browser[Browser]
-
-    subgraph Vercel_Cloud_Platform
-        React[React UI (Vite)]
-    end
-
-    subgraph Render_Cloud_Platform
-        API[Movie Booking API]
-    end
-
-    Browser --> React
-    React --> API
-    API --> React
-    React --> Browser
+    App[App.jsx] --> AuthForm[AuthForm.jsx]
+    App --> ShowList[ShowList.jsx]
+    App --> MovieGrid[MovieGrid.jsx]
+    ShowList --> SeatMap[SeatMap.jsx]
 ```
 
 ## 5. State Management
