@@ -36,11 +36,22 @@ graph TD
 ## 4. Component Hierarchy
 
 graph TD
-    App[App.jsx] --> AuthForm[AuthForm.jsx]
-    App --> ShowList[ShowList.jsx]
-    App --> MovieGrid(MovieGrid - in App.jsx)
+    User[User]
+    Browser[Browser]
     
-    ShowList --> SeatMap[SeatMap.jsx]
+    subgraph "Vercel Cloud Platform"
+        React[React UI (Vite)]
+    end
+
+    subgraph "Render Cloud Platform"
+        API[Movie Booking API]
+    end
+
+    User -- Interacts with --> Browser
+    Browser -- Loads --> React
+    React -- API Calls (Axios) --> API
+    API -- Responds (JSON) --> React
+    React -- Renders HTML/CSS --> Browser
 
 ## 5. State Management
 
