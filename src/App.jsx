@@ -32,7 +32,11 @@ function App() {
   }, [user]); // The dependency is correct
 
   if (!user) {
-    return <AuthForm onLogin={saveUser} />;
+    return (
+      <div className="App">
+        <AuthForm onLogin={saveUser} />
+      </div>
+    );
   }
 
   // If a movie is selected, show the ShowList page
