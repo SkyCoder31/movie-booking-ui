@@ -35,23 +35,23 @@ graph TD
 
 ## 4. Component Hierarchy
 
+```mermaid
 graph TD
-    User[User]
-    Browser[Browser]
-    
-    subgraph "Vercel Cloud Platform"
+    User[User] --> Browser[Browser]
+
+    subgraph Vercel_Cloud_Platform
         React[React UI (Vite)]
     end
 
-    subgraph "Render Cloud Platform"
+    subgraph Render_Cloud_Platform
         API[Movie Booking API]
     end
 
-    User -- Interacts with --> Browser
-    Browser -- Loads --> React
-    React -- API Calls (Axios) --> API
-    API -- Responds (JSON) --> React
-    React -- Renders HTML/CSS --> Browser
+    Browser --> React
+    React --> API
+    API --> React
+    React --> Browser
+```
 
 ## 5. State Management
 
