@@ -11,11 +11,11 @@ graph TD
     User[User] --> Browser[Browser]
 
     subgraph Vercel_Cloud_Platform
-        React[React UI (Vite)]
+        React[React_UI_Vite]
     end
 
     subgraph Render_Cloud_Platform
-        API[Movie Booking API]
+        API[Movie_Booking_API]
     end
 
     Browser --> React
