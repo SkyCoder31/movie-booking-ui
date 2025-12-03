@@ -184,7 +184,7 @@ The application is designed for speed, responsiveness, and intuitive navigation 
 ## 🔗 Live Demo
 
 Access the production application here:  
-**[https://your-frontend-app-name.vercel.app](https://your-frontend-app-name.vercel.app)**
+**[https://movie-booking-ui.vercel.app/](https://movie-booking-ui.vercel.app/)**
 
 For detailed technical documentation, see [**DOCUMENTATION.md**](DOCUMENTATION.md).
 
